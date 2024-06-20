@@ -15,4 +15,4 @@ Welcome to the GitHub repository for a versatile ToDo list application built usi
 -   **Frontend**: React, Redux, Tailwind CSS
 -   **State Management**: Redux Toolkit
 -   **Styling**: Custom CSS with Tailwind utilities
--   **Deployment**: Deployed on [Platform Name], accessible at [URL]
+-   **Deployment**: Deployed on vercel, accessible at https://react-advanced-todo.vercel.app/

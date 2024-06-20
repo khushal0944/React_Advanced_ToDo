@@ -1,0 +1,88 @@
+#todoMainBox{
+    height: 96vh;
+}
+.backImage {
+    background: rgb(28, 185, 217);
+    background: linear-gradient(180deg, rgba(28, 185, 217, 1) 0%, rgb(121, 242, 249) 100%);
+}
+.darkBackImage {
+    background: rgb(28, 185, 217);
+    background: linear-gradient(180deg, rgb(15, 93, 109) 0%, rgb(59, 107, 110) 100%);
+}
+
+#showTodoBox{
+    /* width: 90%; */
+    margin :20px auto;
+}
+::-webkit-scrollbar{
+    width: 8px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    display: none; /* Color of the track */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #6e6e6e; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #585858; /* Color of the thumb on hover */
+  }
+  
+
+.check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    appearance: none;
+    background-color: #ffffff;
+    transition: all .3s;
+   }
+   
+   .check::before {
+    content: '';
+    position: absolute;
+    border: solid  rgb(255, 255, 255);
+    display: block;
+    width: .3em;
+    height: .6em;
+    border-width: 0 .2em .2em 0;
+    z-index: 1;
+    opacity: 0;
+    right: calc(50% - .2em);
+    top: calc(50% - .4em);
+    transform: rotate(0deg);
+    transition: all .3s;
+    transform-origin: center center;
+   }
+   
+   .check:checked {
+    animation: a .3s ease-in forwards;
+    background-color: rgb(164, 0, 167);
+   }
+   
+   .check:checked::before {
+    opacity: 1;
+    transform: rotate(405deg);
+   }
+   
+   @keyframes a {
+    0% {
+     opacity: 1;
+     transform: scale(1) rotateY(0deg);
+    }
+   
+    50% {
+     opacity: 0;
+     transform: scale(.8) rotateY(180deg);
+    }
+   
+    100% {
+     opacity: 1;
+     transform: scale(1) rotateY(360deg);
+    }
+   }

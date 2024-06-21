@@ -43,13 +43,13 @@ export default function App() {
                             <input type="search" name="search" onChange={(e) => setSearch(e.target.value)} className='dark:placeholder:text-white dark:bg-slate-600 dark:text-white text-black w-full h-full outline-none pl-8 rounded ' placeholder='Search ToDo...' />
                         </div>
                         <div id="selectBox" >
-                            <select className='h-8 text-center text-lg rounded max-sm:w-24 bg-blue-500 dark:bg-purple-800 dark:hover:bg-purple-900 cursor-pointer' value={selected} onChange={(e) => setSelected(e.currentTarget.value)}>
+                            <select className='h-8 text-center text-lg rounded max-sm:w-24 bg-blue-500 hover:bg-blue-700 dark:bg-purple-800 dark:hover:bg-purple-900 cursor-pointer' value={selected} onChange={(e) => setSelected(e.currentTarget.value)}>
                                 <option value="All">Show All</option>
                                 <option value="Hide">Hide Completed</option>
                                 <option value="Show">Show Completed</option>
                             </select>
                         </div>
-                        <button className='dark:bg-purple-800 bg-blue-500 w-9 max-sm:w-10 rounded-full h-9 dark:hover:bg-purple-900' onClick={changeTheme}>{theme !== "dark" ? <i className="ri-sun-fill "></i> : <i className="ri-moon-fill"></i>}</button>
+                        <button className='dark:bg-purple-800 bg-blue-500 w-9 max-sm:w-10 rounded-full h-9 hover:bg-blue-700 dark:hover:bg-purple-900' onClick={changeTheme}>{theme !== "dark" ? <i className="ri-sun-fill "></i> : <i className="ri-moon-fill"></i>}</button>
                     </div>                    
                     <h1 className='text-center dark:text-white uppercase mt-5 text-3xl font-medium'>tasks : {filteredTodos.filter((singleTodo)=>{
                                 return search === '' ? singleTodo : singleTodo.todoMsg.toLowerCase().includes(search); 

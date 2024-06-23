@@ -34,7 +34,7 @@ export default function App() {
 
     useEffect(()=>{
         const total = filteredTodos.filter((singleTodo)=>{
-            return search === '' ? singleTodo : singleTodo.todoMsg.toLowerCase().includes(search); 
+            return search === '' ? singleTodo : singleTodo.todoMsg.toLowerCase().includes(search.toLowerCase()); 
         })
         setTasks(total.length)
     },[search, filteredTodos])
@@ -67,7 +67,7 @@ export default function App() {
                         }
                         {
                             (filteredTodos) && (filteredTodos.length > 0) && (filteredTodos).filter((singleTodo)=>{
-                                return search === '' ? singleTodo : singleTodo.todoMsg.toLowerCase().includes(search); 
+                                return search === '' ? singleTodo : singleTodo.todoMsg.toLowerCase().includes(search.toLowerCase()); 
                             }).map((singleTodo)=>(
                             <div key={singleTodo.id}>
                                 <ShowTodoBox todo={singleTodo}/>

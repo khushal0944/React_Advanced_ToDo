@@ -9,9 +9,12 @@ export default function ShowTodoBox({todo}){
     const dispatch = useDispatch()
     const [todoMessage, setTodoMessage] = useState(todo.todoMsg);
     const [checke , setChecke] = useState(todo.completed)
-    const [todoID , setTodoID] = useState(todo.id)
+    const [disableCheck, setDisableCheck] = useState(false)
+
     function editTodo(){
-        dispatch(updateTodo({todoID,todoMessage}))
+        const todoId = todo.id
+        dispatch(updateTodo({todoId,todoMessage}))
+        setDisableCheck(false)
         setIsTodoEditable(true)
     }
 
@@ -25,7 +28,7 @@ export default function ShowTodoBox({todo}){
             <div className="w-full max-sm:w-10/12 flex justify-between p-6 items-center" >
                 <div id="part1" className="flex items-center w-4/5">
 
-                <input id={`todo-${todo.id}`} className={`check w-4 min-w-4 h-4`} type="checkbox" defaultChecked={checke} onChange={changeCheck}/>
+                <input id={`todo-${todo.id}`} className={`check w-4 disabled:opacity-40 disabled:cursor-not-allowed min-w-4 h-4 cursor-pointer`} disabled={disableCheck} type="checkbox" defaultChecked={checke} onChange={changeCheck}/>
                 {isTodoEditable ? <label
                     htmlFor={`todo-${todo.id}`}
                     className={`${checke ? 'line-through  text-[#646464] decoration--[#646464] cursor-pointer' : 'font-bold hover:line-through hover:cursor-pointer hover:text-[#646464] hover:decoration-[#646464]'} dark:text-white  ml-2 p-2`}
@@ -54,6 +57,7 @@ export default function ShowTodoBox({todo}){
                         if (checke) return;
                         if (isTodoEditable) {
                             setIsTodoEditable((prev) => !prev);
+                            setDisableCheck(true)
                         } else editTodo() 
                     }}
                     disabled={todo.completed}

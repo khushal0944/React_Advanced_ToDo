@@ -1,8 +1,18 @@
-# React + Vite
+# ToDo Application 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the GitHub repository for a versatile ToDo list application built using React and Redux. This application allows users to manage their tasks efficiently with features like filtering (show all, show completed, hide completed), searching, theme toggling (light/dark mode), and more.
 
-Currently, two official plugins are available:
+### Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Filtering**: Choose to view all tasks, only completed tasks, or hide completed tasks.
+-   **Search**: Quickly find tasks by searching through their descriptions.
+-   **Theme Toggling**: Switch between light and dark modes for optimal viewing experience.
+-   **Redux Integration**: State management using Redux for seamless data flow.
+-   **Responsive Design**: Designed to work well across different screen sizes.
+
+### Technologies Used:
+
+-   **Frontend**: React, Redux, Tailwind CSS
+-   **State Management**: Redux Toolkit
+-   **Styling**: Custom CSS with Tailwind utilities
+-   **Deployment**: Deployed on vercel, accessible at https://react-advanced-todo.vercel.app/

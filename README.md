@@ -1,4 +1,4 @@
-📝 #ToDo Application
+# ToDo Application 📝
 
 Welcome to the GitHub repository for a versatile ToDo list application built using React and Redux. This application allows users to manage their tasks efficiently with features like filtering (show all, show completed, hide completed), searching, theme toggling (light/dark mode), and more.
 
